@@ -27,6 +27,7 @@ HEADERS  += mainwindow.h \
     definition.h \
     source.h \
     schema.h \
-    course.h
+    course.h \
+    list.h
 
 FORMS    += mainwindow.ui
