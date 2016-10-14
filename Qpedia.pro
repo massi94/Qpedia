@@ -19,7 +19,8 @@ SOURCES += main.cpp\
     definition.cpp \
     source.cpp \
     schema.cpp \
-    course.cpp
+    course.cpp \
+    dbnoteio.cpp
 
 HEADERS  += mainwindow.h \
     note.h \
@@ -28,6 +29,7 @@ HEADERS  += mainwindow.h \
     source.h \
     schema.h \
     course.h \
-    list.h
+    list.h \
+    dbnoteio.h
 
 FORMS    += mainwindow.ui

@@ -14,15 +14,17 @@ void dbIO::writeDB(const QString& mat, const list<const note*>& l) const
         std::cout<<"file non presente";
     }
     else{
+        list<const note*>::iterator it;
         file.open(QIODevice::WriteOnly | QIODevice::Text);
         QXmlStreamWriter stream(&file);
+
         stream.setAutoFormatting(true);
         stream.writeStartDocument();
-        stream.writeStartElement("bookmark");
-        stream.writeAttribute("href", "http://qt.nokia.com/");
-        stream.writeTextElement("title", "Qt Home");
-        stream.writeEndElement(); // bookmark
+        for(it=l.begin();it!=l.end();it++)
+        {
+                l[it]->saveNote(stream);
+        }
         stream.writeEndDocument();
     }
-
 }
+

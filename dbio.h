@@ -17,9 +17,6 @@ public:
     dbIO();
     void writeDB(const QString&, const list<const note*>&) const;
     list<const note*> loadDB(const QString&) const;
-
-
-
 };
 
 #endif // DBIO_H

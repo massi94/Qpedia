@@ -45,7 +45,7 @@ int main(int argc, char *argv[])
     prog.addNote(&s);
     prog.addNote(&f);
 
-    prova=prog.getDefinitions();
+    prova=prog.getNotes();
 
     for(it=prova.begin(); it!=prova.end(); it++)
     {

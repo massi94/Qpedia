@@ -3,6 +3,8 @@
 
 #include<QString>
 #include<QDateTime>
+#include<QXmlStreamWriter>
+#include<QXmlStreamReader>
 
 class note
 {
@@ -25,7 +27,7 @@ public:
     void setCreationDate(const QDateTime&);
     void setModifyDate(const QDateTime&);
     void updateModifyDate();
-    virtual void saveNote() const =0;
+    virtual void saveNote(QXmlStreamWriter&) const =0;
 };
 
 #endif // NOTE_H

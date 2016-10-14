@@ -15,7 +15,7 @@ public:
     void setUrlImg(const QString&);
 
     QString getType() const;
-    virtual void saveNote() const;
+    virtual void saveNote(QXmlStreamWriter&) const;
 
 };
 
