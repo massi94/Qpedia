@@ -29,12 +29,11 @@ QString source::getType()const{
     return "codice";
 }
 
-void source::saveNote(QXmlStreamWriter& writer)const{
-    dbNoteIO io;
-    io.writeStart(writer,"source");
-    io.writeNote(writer,(*this).getTitle(),"title");
-    io.writeNote(writer,(*this).getLanguage(),"language");
-    io.writeNote(writer,(*this).getBody(),"body");
+void source::saveNote(dbOnXml& io)const{
+    io.writeStart("source");
+    io.writeNote((*this).getTitle(),"title");
+    io.writeNote((*this).getLanguage(),"language");
+    io.writeNote((*this).getBody(),"body");
 
-    io.writeEnd(writer);
+    io.writeEnd();
 }

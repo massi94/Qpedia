@@ -3,8 +3,7 @@
 
 #include<QString>
 #include<QDateTime>
-#include<QXmlStreamWriter>
-#include<QXmlStreamReader>
+#include"dbonxml.h"
 
 class note
 {
@@ -27,7 +26,7 @@ public:
     void setCreationDate(const QDateTime&);
     void setModifyDate(const QDateTime&);
     void updateModifyDate();
-    virtual void saveNote(QXmlStreamWriter&) const =0;
+    virtual void saveNote(dbOnXml&) const =0;
 };
 
 #endif // NOTE_H

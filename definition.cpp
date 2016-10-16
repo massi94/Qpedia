@@ -17,10 +17,9 @@ QString definition::getType()const{
     return "Definizione";
 }
 
-void definition::saveNote(QXmlStreamWriter& writer)const{
-    dbNoteIO io;
-    io.writeStart(writer,"definition");
-    io.writeNote(writer,(*this).getTitle(),"title");
-    io.writeNote(writer,(*this).getDescription(),"descriprion");
-    io.writeEnd(writer);
+void definition::saveNote(dbOnXml& io)const{
+    io.writeStart("definition");
+    io.writeNote((*this).getTitle(),"title");
+    io.writeNote((*this).getDescription(),"descriprion");
+    io.writeEnd();
 }

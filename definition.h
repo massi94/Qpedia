@@ -17,7 +17,7 @@ public:
     void setDescription(const QString&);
 
     QString getType() const;
-    virtual void saveNote(QXmlStreamWriter&) const;
+    virtual void saveNote(dbOnXml&) const;
 
 };
 

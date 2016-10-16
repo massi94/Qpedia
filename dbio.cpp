@@ -5,26 +5,25 @@ dbIO::dbIO()
 
 }
 
-void dbIO::writeDB(const QString& mat, const list<const note*>& l) const
+void dbIO::writeDB(const QString& mat, const list<const note*>& l)
 {
-    QFile file("./materia/"+mat+".txt");
+    file.setFile("./materia/"+mat+".txt");
 
-    if(!file.exists())
+    if(!file.isValid())
     {
         std::cout<<"file non presente";
     }
     else{
         list<const note*>::iterator it;
-        file.open(QIODevice::WriteOnly | QIODevice::Text);
-        QXmlStreamWriter stream(&file);
+        file.openFile();
+        file.setStream();
+        file.initialzeFile();
 
-        stream.setAutoFormatting(true);
-        stream.writeStartDocument();
         for(it=l.begin();it!=l.end();it++)
         {
-                l[it]->saveNote(stream);
+                l[it]->saveNote((*this).file);
         }
-        stream.writeEndDocument();
+
+        file.endFile();
     }
 }
-
