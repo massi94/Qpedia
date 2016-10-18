@@ -4,23 +4,17 @@
 #include<QXmlStreamWriter>
 #include<QFile>
 
-class dbOnXml
+#include"dbio.h"
+
+class dbOnXml: public dbIO
 {
 private:
     QXmlStreamWriter wr;
-    QFile out;
 public:
     dbOnXml();
-    void setStream();
-    void initialzeFile();
-    void endFile();
-    void writeNote(const QString&,const QString&);
-    void writeStart(const QString&);
-    void writeEnd();
 
-    void setFile(QString);
-    void openFile();
-    bool isValid() const;
+    virtual void writeDB(QString, const list<const note*>&);
+    virtual void loadDB() const;
 };
 
 #endif // DBONXML_H

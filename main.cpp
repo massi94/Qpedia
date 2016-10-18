@@ -4,7 +4,7 @@
 #include "course.h"
 #include "definition.h"
 #include <iostream>
-#include "dbio.h"
+#include "dbonxml.h"
 
 int main(int argc, char *argv[])
 {
@@ -22,22 +22,12 @@ int main(int argc, char *argv[])
     definition b;
     b.setTitle("titolo");
     b.setDescription("prova");
-    //prova.push_back(&b);.
 
     definition f;
 
     source d;
-    //prova.push_back(&d);
 
     schema s;
-    //prova.push_back(&s);
-
-    for(it=prova.begin(); it!=prova.end(); it++)
-    {
-        std::cout<<(prova[it]->getType()).toStdString()<<std::endl ;
-    }
-
-    std::cout<<prova.getSize();
 
     course prog("PAO");
     prog.addNote(&b);
@@ -45,17 +35,13 @@ int main(int argc, char *argv[])
     prog.addNote(&s);
     prog.addNote(&f);
 
-    prova=prog.getNotes();
 
-    for(it=prova.begin(); it!=prova.end(); it++)
+    for(it=prog.getNotes().begin();it!=prog.getNotes().end();it++)
     {
-        std::cout<<(prova[it]->getType()).toStdString()<<std::endl ;
-        std::cout<<(prova[it]->getTitle()).toStdString()<<std::endl ;
+        std::cout<<prog.getNotes()[it]->getType().toStdString()<<std::endl;
     }
 
-    std::cout<<(prog.getDefinitions()).getSize();
 
-    dbIO asd;
-    asd.writeDB(prog.getMateria(),prova);
-
+    dbOnXml asd;
+    asd.writeDB(prog.getMateria(),prog.getNotes());
 }

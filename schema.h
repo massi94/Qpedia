@@ -2,7 +2,6 @@
 #define SCHEMA_H
 
 #include"note.h"
-#include"dbio.h"
 
 class schema : public note
 {
@@ -15,7 +14,7 @@ public:
     void setUrlImg(const QString&);
 
     QString getType() const;
-    virtual void saveNote(dbOnXml&) const;
+    virtual void saveNote(QXmlStreamWriter&) const;
 
 };
 

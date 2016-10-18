@@ -2,7 +2,6 @@
 #define SOURCE_H
 
 #include"note.h"
-#include"dbio.h"
 
 class source : public note
 {
@@ -18,7 +17,7 @@ public:
     void setBody(const QString&);
 
     QString getType() const;
-    virtual void saveNote(dbOnXml&) const;
+    virtual void saveNote(QXmlStreamWriter&) const;
 };
 
 #endif // SOURCE_H

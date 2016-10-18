@@ -5,40 +5,35 @@ dbOnXml::dbOnXml()
 
 }
 
-void dbOnXml::setStream(){
-    wr.setDevice(&out);
+void dbOnXml::loadDB() const{}
+
+void dbOnXml::writeDB(QString mat, const list<const note *> & l)
+{
+    QFile file("./materia/"+mat+".txt");
+
+    if(!file.exists())
+    {
+        std::cout<<"file non presente";
+    }
+    else{
+
+        file.open(QIODevice::WriteOnly);
+        list<const note*>::iterator it;
+        wr.setDevice(&file);
+
+        wr.setAutoFormatting(true);
+        wr.writeStartDocument();
+
+        wr.writeStartElement("Note");
+
+        for(it=l.begin(); it!=l.end();it++)
+        {
+            l[it]->saveNote(wr);
+        }
+
+        wr.writeEndElement();
+
+        wr.writeEndDocument();
+    }
 }
 
-void dbOnXml::initialzeFile(){
-    wr.setAutoFormatting(true);
-    wr.writeStartDocument();
-}
-
-void dbOnXml::endFile(){
-    wr.writeEndDocument();
-}
-
-void dbOnXml::writeNote(const QString& l,const QString& label){
-    wr.writeTextElement(label,l);
-}
-void dbOnXml::writeStart(const QString& l){
-    wr.writeStartElement(l);
-}
-void dbOnXml::writeEnd(){
-    wr.writeEndElement();
-}
-
-void dbOnXml::setFile(QString f){
-    out.setFileName(f);
-}
-
-bool dbOnXml::isValid() const{
-    if((this->out).exists())
-        return true;
-    else
-        return false;
-}
-
-void dbOnXml::openFile(){
-    out.open(QIODevice::WriteOnly | QIODevice::Text);
-}

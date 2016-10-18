@@ -18,9 +18,9 @@ QString schema::getType()const{
     return "immagine";
 }
 
-void schema::saveNote(dbOnXml& io)const{
-    io.writeStart("schema");
-    io.writeNote((*this).getTitle(),"title");
-    io.writeNote((*this).getUrlImg(),"urlImg");
-    io.writeEnd();
+void schema::saveNote(QXmlStreamWriter& wr)const{
+    wr.writeStartElement("Schema");
+    wr.writeTextElement("Title",getTitle());
+    wr.writeTextElement("UrlImg",getUrlImg());
+    wr.writeEndElement();
 }

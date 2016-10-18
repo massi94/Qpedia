@@ -3,7 +3,6 @@
 
 #include <QString>
 
-#include"dbio.h"
 #include"note.h"
 #include"definition.h"
 #include"schema.h"
