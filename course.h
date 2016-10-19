@@ -8,13 +8,14 @@
 #include"schema.h"
 #include"source.h"
 #include"list.h"
-
+#include"dbonxml.h"
 
 class course
 {
 private:
     QString name;
     list<const note*> noteList;
+    dbOnXml save;
 public:
     course(QString);
 

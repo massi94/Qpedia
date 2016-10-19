@@ -53,3 +53,13 @@ void course::setName(const QString & n){
 void course::addNote(const note* app){
     noteList.push_back(app);
 }
+
+
+void course::saveNote(){
+    save.writeDB(name,noteList);
+}
+
+
+void course::loadNote(){
+    save.loadDB(name,noteList);
+}
