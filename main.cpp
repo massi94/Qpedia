@@ -15,17 +15,32 @@ int main(int argc, char *argv[])
 
     return a.exec();
 */
-    list<const note*>::iterator it;
     setCourses aa16;
+    list<course*>::iterator it;
+    list<const note*>::iterator it2;
+
     course prog("PAO");
+    definition d;
+    schema s;
+    source b;
+    definition g;
+
+    prog.addNote(&d);
+    prog.addNote(&s);
+    prog.addNote(&b);
+    prog.addNote(&g);
 
     aa16.addCourse(&prog);
 
-    prog.loadNote();
-    std::cout<<"ciao";
-    for(it=prog.getNotes().begin(); it!=prog.getNotes().end(); it++)
-    {
-        std::cout<<prog.getNotes()[it]->getTitle().toStdString()<<std::endl;
-    }
+    //prog.loadNote();
+
+    course* r=aa16.searchCourse("PAO");
+    std::cout<<"Risultato: "<<r->getMateria().toStdString()<<std::endl;
+
+    definition p("Agggounta dopo","descirizione dopo");
+    definition k("Agggounta","descirizione");
+    prog.addNote(&k);
+    r->addNote(&p);
+
     prog.saveNote();
 }

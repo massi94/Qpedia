@@ -12,6 +12,7 @@ public:
     void addCourse(course *);
 
     list<course *> getCourses() const;
+    course* searchCourse(QString c) const;
 };
 
 #endif // SETCOURSES_H
