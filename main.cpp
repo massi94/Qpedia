@@ -5,6 +5,7 @@
 #include "definition.h"
 #include <iostream>
 #include "setcourses.h"
+#include "dbonxml.h"
 
 int main(int argc, char *argv[])
 {
@@ -15,6 +16,7 @@ int main(int argc, char *argv[])
 
     return a.exec();
 */
+    dbOnXml sav;
     setCourses aa16;
     list<course*>::iterator it;
     list<const note*>::iterator it2;
@@ -32,7 +34,7 @@ int main(int argc, char *argv[])
 
     aa16.addCourse(&prog);
 
-    //prog.loadNote();
+    //prog.loadNote(sav);
 
     course* r=aa16.searchCourse("PAO");
     std::cout<<"Risultato: "<<r->getMateria().toStdString()<<std::endl;
@@ -42,5 +44,5 @@ int main(int argc, char *argv[])
     prog.addNote(&k);
     r->addNote(&p);
 
-    prog.saveNote();
+    prog.saveNote(sav);
 }

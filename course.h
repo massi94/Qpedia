@@ -8,14 +8,13 @@
 #include"schema.h"
 #include"source.h"
 #include"list.h"
-#include"dbonxml.h"
+#include"dbio.h"
 
 class course
 {
 private:
     QString name;
     list<const note*> noteList;
-    dbOnXml save;
 public:
     course(QString);
 
@@ -28,8 +27,8 @@ public:
     void setName(const QString&);
 
     void outCourse() const;
-    void loadNote();
-    void saveNote();
+    void loadNote(dbIO&);
+    void saveNote(dbIO&);
     void addNote(const note* );
     const note* findNote(int) const;
     void deleteMemo(int);
