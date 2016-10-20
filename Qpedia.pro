@@ -20,7 +20,8 @@ SOURCES += main.cpp\
     source.cpp \
     schema.cpp \
     course.cpp \
-    dbonxml.cpp
+    dbonxml.cpp \
+    setcourses.cpp
 
 HEADERS  += mainwindow.h \
     note.h \
@@ -30,6 +31,7 @@ HEADERS  += mainwindow.h \
     schema.h \
     course.h \
     list.h \
-    dbonxml.h
+    dbonxml.h \
+    setcourses.h
 
 FORMS    += mainwindow.ui
