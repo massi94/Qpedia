@@ -5,6 +5,7 @@
 #-------------------------------------------------
 
 QT       += core gui
+QT += gui
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
@@ -21,7 +22,12 @@ SOURCES += main.cpp\
     schema.cpp \
     course.cpp \
     dbonxml.cpp \
-    setcourses.cpp
+    setcourses.cpp \
+    mainview.cpp \
+    user.cpp \
+    teacher.cpp \
+    tutor.cpp \
+    student.cpp
 
 HEADERS  += mainwindow.h \
     note.h \
@@ -32,6 +38,11 @@ HEADERS  += mainwindow.h \
     course.h \
     list.h \
     dbonxml.h \
-    setcourses.h
+    setcourses.h \
+    mainview.h \
+    user.h \
+    teacher.h \
+    tutor.h \
+    student.h
 
 FORMS    += mainwindow.ui
