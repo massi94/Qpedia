@@ -28,7 +28,7 @@ public:
 
     void outCourse() const;
     void loadNote(dbIO&);
-    void saveNote(dbIO&);
+    void saveNote(dbIO&)const;
     void addNote(const note* );
     const note* findNote(int) const;
     void deleteMemo(int);
