@@ -10,6 +10,8 @@
 #include"schema.h"
 #include"source.h"
 
+
+
 class dbOnXml: public dbIO
 {
 private:
@@ -20,6 +22,8 @@ public:
 
     virtual void writeDB(QString, const list<const note*>&);
     virtual void loadDB(QString, list<const note*>&);
+
+    virtual void writeCourse(const list<course*>&);
 };
 
 #endif // DBONXML_H

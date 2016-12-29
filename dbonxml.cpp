@@ -91,4 +91,28 @@ void dbOnXml::loadDB(QString mat, list<const note *> & l){
     file.close();
 }
 
+void dbOnXml::writeCourse(const list<course*>& l){
+    QFile file("setOfCourse.txt");
+
+    file.open(QIODevice::WriteOnly);
+    list<course*>::iterator it;
+    wr.setDevice(&file);
+
+    wr.setAutoFormatting(true);
+    wr.writeStartDocument();
+
+    wr.writeStartElement("Note");
+
+    for(it=l.begin();it!=l.end();it++)
+    {
+        //l[it].;
+    }
+    wr.writeEndElement();
+
+    wr.writeEndDocument();
+
+    file.close();
+
+}
+
 
