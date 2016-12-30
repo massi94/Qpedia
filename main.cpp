@@ -7,12 +7,16 @@
 #include "setcourses.h"
 #include "dbonxml.h"
 
+#include"user.h"
+#include"student.h"
+#include"teacher.h"
+
 #include "mainview.h"
 
 
 int main(int argc, char *argv[])
 {
-
+/*
     QApplication app (argc, argv);
 
     mainView p;
@@ -21,7 +25,7 @@ int main(int argc, char *argv[])
 return app.exec();
 
 
-/*
+
     // Create a container window
 
     QWidget window;
@@ -89,5 +93,47 @@ return app.exec();
 
     prog.saveNote(sav);
     */
+
+    dbOnXml sav;
+
+    course prog("PAO");
+    prog.loadNote(sav);
+
+    setCourses sof;
+    sof.addCourse(&prog);
+
+    std::cout<<prog.getMateria().toStdString();
+
+    student stud;
+    teacher teach;
+
+    list<const note*> ll;
+    list<const note*>::iterator it2;
+
+    course* prova;
+    prova = stud.findCourse(sof,"PAO");
+    stud.addNote(*prova,new definition("DaUser","DaUtente"));
+
+    teach.createCourse(sof,"SWE");
+
+    ll=prova->getNotes();
+    std::cout<<"adesso";
+    for(it2=ll.begin();it2!=ll.end();++it2)
+    {
+        std::cout<<ll[it2]->getTitle().toStdString()<<std::endl;
+    }
+
+    list<course*> cc;
+    list<course*>::iterator it3;
+
+    cc=sof.getCourses();
+
+    for(it3=cc.begin();it3!=cc.end();++it3)
+    {
+        std::cout<<cc[it3]->getMateria().toStdString()<<std::endl;
+    }
+
+    //prog.saveNote(sav);
+
 
 }

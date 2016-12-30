@@ -7,7 +7,8 @@ class student : public user
 {
 public:
     student();
-    virtual course* findCourse(setCourses&,QString&);
+    course* findCourse(setCourses&,QString);
+    void addNote(course&,note*);
 
 };
 

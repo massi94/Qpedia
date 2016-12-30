@@ -26,7 +26,6 @@ SOURCES += main.cpp\
     mainview.cpp \
     user.cpp \
     teacher.cpp \
-    tutor.cpp \
     student.cpp
 
 HEADERS  += mainwindow.h \
@@ -42,7 +41,6 @@ HEADERS  += mainwindow.h \
     mainview.h \
     user.h \
     teacher.h \
-    tutor.h \
     student.h
 
 FORMS    += mainwindow.ui

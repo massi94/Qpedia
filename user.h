@@ -17,9 +17,7 @@ public:
     void setPassword(QString&);
     bool login(QString&, QString&);
 
-    virtual course* findCourse(setCourses&,QString&) =0;
-    virtual void addNote(course&, note&) =0;
-    virtual void createCourse(setCourses&, QString &) =0;
+    virtual ~user();
 
 };
 

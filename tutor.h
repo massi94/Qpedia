@@ -3,7 +3,7 @@
 
 #include"student.h"
 
-class tutor: public user
+class tutor: public student
 {
 public:
     tutor();
