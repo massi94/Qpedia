@@ -29,7 +29,7 @@ QString source::getType()const{
     return "codice";
 }
 
-void source::saveNote(QXmlStreamWriter& wr)const{
+void source::saveNote(QXmlStreamWriter & wr)const{
     wr.writeStartElement("Source");
     wr.writeTextElement("Title",getTitle());
     wr.writeTextElement("Language",getLanguage());

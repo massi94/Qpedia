@@ -3,7 +3,7 @@
 
 #include<QString>
 #include<QDateTime>
-#include<QXmlStreamWriter>
+#include<QXmlStreamReader>
 
 class note
 {

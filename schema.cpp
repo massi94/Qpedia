@@ -18,7 +18,7 @@ QString schema::getType()const{
     return "immagine";
 }
 
-void schema::saveNote(QXmlStreamWriter& wr)const{
+void schema::saveNote(QXmlStreamWriter & wr)const{
     wr.writeStartElement("Schema");
     wr.writeTextElement("Title",getTitle());
     wr.writeTextElement("UrlImg",getUrlImg());

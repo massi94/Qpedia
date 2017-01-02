@@ -8,7 +8,6 @@
 #include"schema.h"
 #include"source.h"
 #include"list.h"
-#include"dbio.h"
 
 class course
 {
@@ -27,8 +26,6 @@ public:
     void setName(const QString&);
 
     void outCourse() const;
-    void loadNote(dbIO&);
-    void saveNote(dbIO&)const;
     void addNote(const note* );
     const note* findNote(int) const;
     void deleteMemo(int);

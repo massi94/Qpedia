@@ -7,7 +7,7 @@ class student : public user
 {
 public:
     student();
-    course* findCourse(setCourses&,QString);
+    const course* findCourse(setCourses&,QString) const;
     void addNote(course&,note*);
 
 };

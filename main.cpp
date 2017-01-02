@@ -60,80 +60,37 @@ return app.exec();
     return app.exec();
 */
 
-/*
-
-    dbOnXml sav;
-    setCourses aa16;
-    list<course*>::iterator it;
-    list<const note*>::iterator it2;
-
-    course prog("PAO");
-    definition d;
-    schema s;
-    source b;
-    definition g;
-
-    prog.addNote(&d);
-    prog.addNote(&s);
-    prog.addNote(&b);
-    prog.addNote(&g);
-
-    aa16.addCourse(&prog);
-
-    //prog.loadNote(sav);
-
-    course* r=aa16.searchCourse("PAO");
-    std::cout<<"Risultato: "<<r->getMateria().toStdString()<<std::endl;
-
-    definition p("Agggounta dopo","descirizione dopo");
-    definition k("Agggounta","descirizione");
-    prog.addNote(&k);
-    r->addNote(&p);
-
-
-    prog.saveNote(sav);
-    */
 
     dbOnXml sav;
 
-    course prog("PAO");
-    prog.loadNote(sav);
-
-    setCourses sof;
-    sof.addCourse(&prog);
-
-    std::cout<<prog.getMateria().toStdString();
+    setCourses sc;
 
     student stud;
     teacher teach;
 
-    list<const note*> ll;
-    list<const note*>::iterator it2;
+    sav.loadDB(sc);
+/*
+    teach.createCourse(sc,"PAO");
+    teach.createCourse(sc,"TecWeb");
+    teach.createCourse(sc,"P3");
 
-    course* prova;
-    prova = stud.findCourse(sof,"PAO");
-    stud.addNote(*prova,new definition("DaUser","DaUtente"));
+    teach.addNote(*(sc.searchCourse("PAO")),new definition());
+    teach.addNote(*(sc.searchCourse("PAO")),new source());
+    teach.addNote(*(sc.searchCourse("PAO")),new definition());
+    teach.addNote(*(sc.searchCourse("PAO")),new schema());
 
-    teach.createCourse(sof,"SWE");
 
-    ll=prova->getNotes();
-    std::cout<<"adesso";
-    for(it2=ll.begin();it2!=ll.end();++it2)
-    {
-        std::cout<<ll[it2]->getTitle().toStdString()<<std::endl;
-    }
+    teach.addNote(*(sc.searchCourse("TecWeb")),new source());
+    teach.addNote(*(sc.searchCourse("TecWeb")),new source());
+    teach.addNote(*(sc.searchCourse("TecWeb")),new definition());
 
-    list<course*> cc;
-    list<course*>::iterator it3;
+    stud.addNote(*(sc.searchCourse("TecWeb")),new definition("daStudente"));
+    stud.addNote(*(sc.searchCourse("PAO")),new schema("daStudente"));
+*/
 
-    cc=sof.getCourses();
+    sav.writeDB(sc);
 
-    for(it3=cc.begin();it3!=cc.end();++it3)
-    {
-        std::cout<<cc[it3]->getMateria().toStdString()<<std::endl;
-    }
 
-    //prog.saveNote(sav);
 
 
 }

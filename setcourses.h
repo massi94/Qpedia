@@ -3,7 +3,6 @@
 
 #include"list.h"
 #include"course.h"
-#include"dbio.h"
 
 class setCourses
 {
@@ -16,8 +15,6 @@ public:
     list<course *> getCourses() const;
     course* searchCourse(QString c) const;
 
-    void saveCourses(dbIO&);
-    void loadCourses(dbIO&);
 };
 
 #endif // SETCOURSES_H

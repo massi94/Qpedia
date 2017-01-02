@@ -23,13 +23,7 @@ course* setCourses::searchCourse(QString c) const{
         if(courses[it]->getMateria()==c)
             return courses[it];
     }
+    return 0;
 
 }
 
-void setCourses::saveCourses(dbIO& save){
-    save.writeCourse(courses);
-}
-
-void setCourses::loadCourses(dbIO&){
-
-}

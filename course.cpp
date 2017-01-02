@@ -55,11 +55,3 @@ void course::addNote(const note* app){
 }
 
 
-void course::saveNote(dbIO & save) const{
-    save.writeDB(name,noteList);
-}
-
-
-void course::loadNote(dbIO &save){
-    save.loadDB(name,noteList);
-}

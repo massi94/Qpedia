@@ -5,7 +5,7 @@ student::student()
 
 }
 
-course* student::findCourse(setCourses& sc,QString n){
+const course* student::findCourse(setCourses& sc,QString n) const{
     return sc.searchCourse(n);
 
 }

@@ -3,12 +3,15 @@
 
 #include<QXmlStreamWriter>
 #include<QFile>
+#include<iostream>
 
 #include"dbio.h"
+#include "list.h"
 #include"note.h"
 #include"definition.h"
 #include"schema.h"
 #include"source.h"
+#include "setcourses.h"
 
 
 
@@ -20,10 +23,8 @@ private:
 public:
     dbOnXml();
 
-    virtual void writeDB(QString, const list<const note*>&);
-    virtual void loadDB(QString, list<const note*>&);
-
-    virtual void writeCourse(const list<course*>&);
+    virtual void writeDB(const setCourses &);
+    virtual void loadDB(setCourses &);
 };
 
 #endif // DBONXML_H
