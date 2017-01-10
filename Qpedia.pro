@@ -26,7 +26,11 @@ SOURCES += main.cpp\
     mainview.cpp \
     user.cpp \
     teacher.cpp \
-    student.cpp
+    student.cpp \
+    noteview.cpp \
+    definitionview.cpp \
+    schemaview.cpp \
+    sourceview.cpp
 
 HEADERS  += mainwindow.h \
     note.h \
@@ -41,6 +45,10 @@ HEADERS  += mainwindow.h \
     mainview.h \
     user.h \
     teacher.h \
-    student.h
+    student.h \
+    noteview.h \
+    definitionview.h \
+    schemaview.h \
+    sourceview.h
 
 FORMS    += mainwindow.ui

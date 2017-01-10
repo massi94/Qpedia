@@ -13,7 +13,7 @@ class dbIO
 public:
     dbIO();
     virtual void writeDB(const setCourses &) =0;
-    //virtual void loadDB(QString, setCourses &) =0;
+    virtual void loadDB(setCourses &) =0;
 };
 
 #endif // DBIO_H

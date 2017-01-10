@@ -1,5 +1,10 @@
 #include "mainview.h"
 
+#include <QGraphicsScene>
+#include <QGraphicsPixmapItem>
+#include <QPixmap>
+#include <QGraphicsView>
+
 mainView::mainView()
 {
     vLayMain = new QVBoxLayout();
@@ -13,34 +18,15 @@ void mainView::newCourse(){
     nuovo->show();
 }
 
-void clearLayout(QLayout* layout, bool deleteWidgets = true)
-{
-    while (QLayoutItem* item = layout->takeAt(0))
-    {
-        QWidget* widget;
-        if ((deleteWidgets) && (widget = item->widget())) {
-            delete widget;
-        }
-        if (QLayout* childLayout = item->layout()) {
-            clearLayout(childLayout, deleteWidgets);
-        }
-        delete item;
-    }
-}
 
 QHBoxLayout* mainView::createBody(){
-    if(hLayBody)
+    if(vLayMain->count()>2)
     {
-        while (QLayoutItem* item = hLayBody->takeAt(0))
-        {
-            QWidget* widget;
-            if ((widget = item->widget())) {
-                delete widget;
-            }
-
-        }
+        hLayBody->deleteLater();
     }
+
     hLayBody = new QHBoxLayout;
+
     QTableView *tab = new QTableView();
     QStandardItemModel *model = new QStandardItemModel( 5, 2);
     tab->verticalHeader()->hide();
@@ -50,20 +36,43 @@ QHBoxLayout* mainView::createBody(){
     tab->horizontalHeader()->setStretchLastSection(true);
     tab->setEditTriggers(QAbstractItemView::NoEditTriggers);
 
-    QTextEdit *space = new QTextEdit();
-    space->setReadOnly(true);
+
+    QPushButton *vedi = new QPushButton("Vedi");
+
+
+
     hLayBody->addWidget(tab);
-    hLayBody->addWidget(space);
+    hLayBody->addWidget(vedi);
+
 
 
     QLabel *courseName = new QLabel();
     courseName->setText("Nome del corso A.A 2016/2017");
+    std::cout<<hLayBody->count()<<std::endl;
+    std::cout<<vLayMain->count()<<std::endl;
+
+    QObject::connect(vedi,SIGNAL(clicked()),this,SLOT(loadNote()));
 
     return hLayBody;
 }
 
 void mainView::loadBody(){
     vLayMain->addLayout(createBody());
+}
+
+void mainView::loadNote(){
+    std::cout<<"HLAYBODY: "<<hLayBody->count()<<std::endl;
+
+    if(hLayBody->count()>=2)
+    {
+        hLayBody->deleteLater();
+    }
+    QImage image("test.png");
+    QGraphicsScene* scene = new QGraphicsScene();
+    QGraphicsView* view = new QGraphicsView(scene);
+    QGraphicsPixmapItem* item = new QGraphicsPixmapItem(QPixmap::fromImage(image));
+    scene->addItem(item);
+    hLayBody->addWidget(view);
 }
 
 
@@ -100,9 +109,11 @@ void mainView::mainScreen(){
     vLayMain->addLayout(hLaySelection);
 
     //vLayMain->addLayout(loadBody());
+
     QObject::connect(note,SIGNAL(triggered()),this,SLOT(newCourse()));
 
     QObject::connect(find,SIGNAL(clicked()),this,SLOT(loadBody()));
+
 
     QWidget *w = new QWidget();
 

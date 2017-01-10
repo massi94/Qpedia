@@ -1,6 +1,8 @@
 #ifndef MAINVIEW_H
 #define MAINVIEW_H
 
+#include<iostream>
+
 #include <QMenu>
 #include <QMenuBar>
 #include <QStatusBar>
@@ -39,11 +41,11 @@ public:
     ~mainView();
     void mainScreen();
     QHBoxLayout* createBody();
-    void clearLayout(QLayout*, bool deleteWidgets);
 
 public slots:
     void newCourse();
     void loadBody();
+    void loadNote();
 
 
 };

@@ -16,16 +16,20 @@
 
 int main(int argc, char *argv[])
 {
-/*
+
     QApplication app (argc, argv);
 
     mainView p;
     p.mainScreen();
 
+
+
+
+
 return app.exec();
 
 
-
+/*
     // Create a container window
 
     QWidget window;
