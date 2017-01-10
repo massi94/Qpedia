@@ -3,11 +3,11 @@
 
 #include <QString>
 
-#include"note.h"
-#include"definition.h"
-#include"schema.h"
-#include"source.h"
-#include"list.h"
+#include"../model/note.h"
+#include"../model/definition.h"
+#include"../model/schema.h"
+#include"../model/source.h"
+#include"../model/list.h"
 
 class course
 {

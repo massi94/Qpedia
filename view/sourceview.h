@@ -1,7 +1,7 @@
 #ifndef SOURCEVIEW_H
 #define SOURCEVIEW_H
 
-#include"noteview.h"
+#include"../view/noteview.h"
 
 class sourceView : public noteView
 {

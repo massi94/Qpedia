@@ -1,7 +1,7 @@
 #ifndef DEFINITIONVIEW_H
 #define DEFINITIONVIEW_H
 
-#include"noteview.h"
+#include"../view/noteview.h"
 
 class definitionView : public noteView
 {

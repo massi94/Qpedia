@@ -1,4 +1,4 @@
-#include "teacher.h"
+#include "../model/teacher.h"
 
 teacher::teacher()
 {

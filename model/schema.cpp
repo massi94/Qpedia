@@ -1,4 +1,4 @@
-#include "schema.h"
+#include "../model/schema.h"
 
 schema::schema(QString t,QString i)
 {

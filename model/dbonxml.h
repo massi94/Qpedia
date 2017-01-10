@@ -5,13 +5,13 @@
 #include<QFile>
 #include<iostream>
 
-#include"dbio.h"
-#include "list.h"
-#include"note.h"
-#include"definition.h"
-#include"schema.h"
-#include"source.h"
-#include "setcourses.h"
+#include"../model/dbio.h"
+#include"../model/list.h"
+#include"../model/note.h"
+#include"../model/definition.h"
+#include"../model/schema.h"
+#include"../model/source.h"
+#include"../model/setcourses.h"
 
 
 

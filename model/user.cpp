@@ -1,4 +1,4 @@
-#include "user.h"
+#include "../model/user.h"
 
 user::user()
 {

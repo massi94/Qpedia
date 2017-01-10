@@ -1,4 +1,4 @@
-#include "sourceview.h"
+#include "../view/sourceview.h"
 
 sourceView::sourceView()
 {

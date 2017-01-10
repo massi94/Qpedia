@@ -1,7 +1,7 @@
 #ifndef SCHEMA_H
 #define SCHEMA_H
 
-#include"note.h"
+#include"../model/note.h"
 
 class schema : public note
 {

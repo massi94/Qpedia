@@ -13,42 +13,42 @@ TARGET = Qpedia
 TEMPLATE = app
 
 
-SOURCES += main.cpp\
-        mainwindow.cpp \
-    note.cpp \
-    dbio.cpp \
-    definition.cpp \
-    source.cpp \
-    schema.cpp \
-    course.cpp \
-    dbonxml.cpp \
-    setcourses.cpp \
-    mainview.cpp \
-    user.cpp \
-    teacher.cpp \
-    student.cpp \
-    noteview.cpp \
-    definitionview.cpp \
-    schemaview.cpp \
-    sourceview.cpp
+SOURCES += model/course.cpp \
+    model/dbio.cpp \
+    model/dbonxml.cpp \
+    model/definition.cpp \
+    model/list.cpp \
+    model/note.cpp \
+    model/schema.cpp \
+    model/setcourses.cpp \
+    model/source.cpp \
+    model/student.cpp \
+    model/teacher.cpp \
+    model/user.cpp \
+    view/definitionview.cpp \
+    view/mainview.cpp \
+    view/mainwindow.cpp \
+    view/noteview.cpp \
+    view/schemaview.cpp \
+    view/sourceview.cpp \
+    main.cpp
 
-HEADERS  += mainwindow.h \
-    note.h \
-    dbio.h \
-    definition.h \
-    source.h \
-    schema.h \
-    course.h \
-    list.h \
-    dbonxml.h \
-    setcourses.h \
-    mainview.h \
-    user.h \
-    teacher.h \
-    student.h \
-    noteview.h \
-    definitionview.h \
-    schemaview.h \
-    sourceview.h
+HEADERS  += model/course.h \
+    model/dbio.h \
+    model/dbonxml.h \
+    model/definition.h \
+    model/list.h \
+    model/note.h \
+    model/schema.h \
+    model/setcourses.h \
+    model/source.h \
+    model/student.h \
+    model/teacher.h \
+    model/user.h \
+    view/definitionview.h \
+    view/mainview.h \
+    view/mainwindow.h \
+    view/noteview.h \
+    view/schemaview.h \
+    view/sourceview.h
 
-FORMS    += mainwindow.ui

@@ -1,4 +1,4 @@
-#include "mainview.h"
+#include "../view/mainview.h"
 
 #include <QGraphicsScene>
 #include <QGraphicsPixmapItem>

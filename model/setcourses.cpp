@@ -1,4 +1,4 @@
-#include "setcourses.h"
+#include "../model/setcourses.h"
 
 setCourses::setCourses()
 {

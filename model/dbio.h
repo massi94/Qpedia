@@ -5,7 +5,7 @@
 #include <iostream>
 
 
-#include "setcourses.h"
+#include "../model/setcourses.h"
 
 
 class dbIO

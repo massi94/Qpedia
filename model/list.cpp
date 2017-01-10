@@ -1,3 +1,3 @@
-#include "list.h"
+#include "../model/list.h"
 
 #include"iostream"

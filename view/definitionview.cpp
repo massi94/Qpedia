@@ -1,4 +1,4 @@
-#include "definitionview.h"
+#include "../view/definitionview.h"
 
 definitionView::definitionView()
 {

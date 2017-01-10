@@ -2,9 +2,9 @@
 #define USER_H
 
 #include <QString>
-#include "course.h"
-#include "note.h"
-#include "setcourses.h"
+#include"../model/course.h"
+#include"../model/note.h"
+#include"../model/setcourses.h"
 
 class user
 {

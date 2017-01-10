@@ -1,4 +1,4 @@
-#include "source.h"
+#include "../model/source.h"
 
 source::source(QString t,QString l,QString b)
 {

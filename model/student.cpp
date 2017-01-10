@@ -1,4 +1,4 @@
-#include "student.h"
+#include "../model/student.h"
 
 student::student()
 {

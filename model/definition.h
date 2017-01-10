@@ -1,7 +1,7 @@
 #ifndef DEFINITION_H
 #define DEFINITION_H
 
-#include"note.h"
+#include"../model/note.h"
 
 class definition : public note
 {

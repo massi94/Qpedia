@@ -1,17 +1,17 @@
-#include "mainwindow.h"
-#include <QApplication>
-#include "list.h"
-#include "course.h"
-#include "definition.h"
-#include <iostream>
-#include "setcourses.h"
-#include "dbonxml.h"
+#include"view/mainwindow.h"
+#include<QApplication>
+#include"model/list.h"
+#include"model/course.h"
+#include"model/definition.h"
+#include<iostream>
+#include"model/setcourses.h"
+#include"model/dbonxml.h"
 
-#include"user.h"
-#include"student.h"
-#include"teacher.h"
+#include"model/user.h"
+#include"model/student.h"
+#include"model/teacher.h"
 
-#include "mainview.h"
+#include"view/mainview.h"
 
 
 int main(int argc, char *argv[])

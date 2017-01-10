@@ -1,4 +1,4 @@
-#include "definition.h"
+#include "../model/definition.h"
 #include <iostream>
 definition::definition(QString t,QString s){
     note::setTitle(t);

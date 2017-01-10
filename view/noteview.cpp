@@ -1,4 +1,4 @@
-#include "noteview.h"
+#include "../view/noteview.h"
 
 noteView::noteView()
 {

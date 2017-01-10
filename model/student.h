@@ -1,7 +1,7 @@
 #ifndef STUDENT_H
 #define STUDENT_H
 
-#include "user.h"
+#include"../model/user.h"
 
 class student : public user
 {

@@ -1,4 +1,4 @@
-#include "course.h"
+#include "../model/course.h"
 
 course::course(QString n) : name(n){}
 

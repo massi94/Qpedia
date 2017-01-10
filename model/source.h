@@ -1,7 +1,7 @@
 #ifndef SOURCE_H
 #define SOURCE_H
 
-#include"note.h"
+#include"../model/note.h"
 
 class source : public note
 {

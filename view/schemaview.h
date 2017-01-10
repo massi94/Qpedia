@@ -1,7 +1,7 @@
 #ifndef SCHEMAVIEW_H
 #define SCHEMAVIEW_H
 
-#include"noteview.h"
+#include"../view/noteview.h"
 
 class schemaView : public noteView
 {
