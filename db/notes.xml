@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<notes>
+    <usrCourse name="P2">
+        <definition>
+            <id>1</id>
+            <title>costruttore</title>
+            <description>Nella programmazione orientata agli oggetti, indicano dei metodi associati alle classi che hanno lo scopo di inizializzare le variabili di istanza. La chiamata è effettuata automaticamente all'atto della creazione di un nuovo oggetto di una classe e nella maggior parte dei linguaggi non è possibile chiamarlo manualmente in un secondo tempo.</description>
+            <creationDate>2017:06:19 11:39:04</creationDate>
+            <modifyDate>2017:06:19 11:39:13</modifyDate>
+            <favourite>0</favourite>
+            <parent>P2</parent>
+        </definition>
+        <source>
+            <id>2</id>
+            <title>hello world</title>
+            <language>c+</language>
+            <body>int main(){
+std::cout&lt;&lt;&quot;Hello world&quot;;
+}</body>
+            <creationDate>2017:06:19 11:40:01</creationDate>
+            <modifyDate>2017:06:19 11:40:05</modifyDate>
+            <favourite>0</favourite>
+            <parent>P2</parent>
+        </source>
+        <definition>
+            <id>3</id>
+            <title>distruttore</title>
+            <description>Nella programmazione orientata agli oggetti, sono degli eventi particolari che vengono invocati automaticamente quando l'oggetto viene distrutto. Sono stati concepiti per liberare le risorse utilizzate dall'oggetto, definite dalla loro classe e create dal corrispondente costruttore ed eventualmente le altre risorse allocate dinamicamente durante l'esecuzione dei metodi dell'oggetto stesso.</description>
+            <creationDate>2017:06:19 11:41:06</creationDate>
+            <modifyDate>2017:06:19 11:41:06</modifyDate>
+            <favourite>0</favourite>
+            <parent>P2</parent>
+        </definition>
+    </usrCourse>
+    <usrStudent name="fmassign">
+        <course>P3</course>
+        <course>P2</course>
+    </usrStudent>
+    <usrCourse name="P3">
+        <definition>
+            <id>4</id>
+            <title>concorrenza</title>
+            <description>Una caratteristica dei sistemi di elaborazione nei quali può verificarsi che un insieme di processi o sottoprocessi (thread) computazionali sia in esecuzione nello stesso istante. Tale sistema viene appunto chiamato sistema a concorrenza o sistema concorrente. L'esecuzione contemporanea può condurre a interazione tra processi quando viene coinvolta una risorsa condivisa.</description>
+            <creationDate>2017:06:19 11:42:43</creationDate>
+            <modifyDate>2017:06:19 11:42:48</modifyDate>
+            <favourite>1</favourite>
+            <parent>P3</parent>
+        </definition>
+    </usrCourse>
+</notes>

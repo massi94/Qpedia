@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<users>
+    <usrCourse>
+        <username>P2</username>
+        <password>psw</password>
+    </usrCourse>
+    <usrStudent>
+        <username>fmassign</username>
+        <password>fmassign</password>
+    </usrStudent>
+    <usrCourse>
+        <username>P3</username>
+        <password>P3</password>
+    </usrCourse>
+</users>
